@@ -1,0 +1,29 @@
+@keyframes drop{
+	0%   { transform: translateY(-100vh);}
+	100% { transform: translateY(0); }
+}
+
+body{
+	height: 100%;
+	width: 100%;
+  background: #002D4D;
+}
+#sb-logo{
+	display: block;
+	position: relative;
+	margin: auto;
+	margin-top: 50%;
+	margin-top: 50vh;
+	min-height: 10vh;
+}
+#sb-logo > div{
+		display: none;
+		background-image: url("data:image/svg+xml;utf8,<svg width='134px' height='87px' viewBox='0 0 134 87' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><polygon stroke='none' fill='%233FAEFF' points='0 87 67 0 134 87'></polygon></svg>");
+		background-size: contain;
+		background-position: center center;
+		background-repeat: no-repeat;
+		width: 134px;
+    height: 87px;
+		animation: drop .5s ease-in;
+		position: absolute;
+	}
