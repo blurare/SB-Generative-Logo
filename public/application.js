@@ -60,6 +60,29 @@ var coordinates = new Array(
 	/*seventh Line*/
 		{ x: 4.5 , y: 7 }
 	);
+
+setInterval(function() { CheckValue() }, 100);
+function CheckValue(){
+    var response = JSON.parse(httpGet("/check"));
+    console.log(response.state);
+    if(response.state){
+        nextTri();
+        document.getElementById('image').style.display ="block";
+    }
+    else
+    {
+        document.getElementById('image').style.display ="none";
+    }
+}
+    
+function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); 
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+
 function nextTri(){
 	id = i.toString();
 	//console.log( document.getElementById(id).css('width'));
