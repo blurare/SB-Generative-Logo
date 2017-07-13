@@ -83,9 +83,8 @@ function httpGet(theUrl)
     return xmlHttp.responseText;
 }
 
-function nextTri(){
+function nextTri(){   
 	id = i.toString();
-	//console.log( document.getElementById(id).css('width'));
 	if (i<48){
 		console.log( i+" ("+coordinates[i].x+" , "+coordinates[i].y+")");
 		document.getElementById(id).style.left = (coordinates[i].x*triWidth).toString()+"px";
