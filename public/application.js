@@ -3,9 +3,9 @@ var triHeight = 87;
 var i = 1;
 var id ;
 
-	var coordinates = 
+var coordinates =
 	[
-            [0 , 0 ],
+      [0 , 0 ],
 			[1 , 0 ],
 			[2 , 0 ],
 			[3 , 0 ],
@@ -60,8 +60,11 @@ var id ;
 			[ 5 ,  6 ],
 		/*seventh Line*/
 			[ 4.5 , 7 ]
-    ];
-setInterval(function() { CheckValue() }, 5000);
+];
+
+setInterval(function() { CheckValue() }, 1000);
+
+
 function CheckValue(){
     var response = JSON.parse(httpGet("/check"));
     console.log(response.state);
@@ -74,16 +77,16 @@ function CheckValue(){
         //document.getElementById('image').style.display ="none";
     //}
 }
-    
+
 function httpGet(theUrl)
 {
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, false ); 
+    xmlHttp.open( "GET", theUrl, false );
     xmlHttp.send( null );
     return xmlHttp.responseText;
 }
 
-function nextTri(){   
+function nextTri(){
 	id = i.toString();
 	if (i<48){
 		console.log( i+" ("+coordinates[i][0]+" , "+coordinates[i][1]+")");

@@ -1,10 +1,6 @@
 require 'sinatra'
-require 'rpi_gpio'
 
 PIN_NUM = 27
-
-RPi::GPIO.set_numbering :bcm
-RPi::GPIO.setup PIN_NUM, :as => :input
 
 set :public_folder, 'public'
 
@@ -18,5 +14,5 @@ get '/check' do
 end
 
 def check_pin(pin)
-  RPi::GPIO.high? pin
+	[true, false].shuffle.first
 end
