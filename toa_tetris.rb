@@ -6,7 +6,6 @@ PIN_NUM = 27
 RPi::GPIO.set_numbering :bcm
 RPi::GPIO.setup PIN_NUM, :as => :input
 
-
 set :public_folder, 'public'
 
 get '/' do

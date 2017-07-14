@@ -61,7 +61,7 @@ var id ;
 		/*seventh Line*/
 			[ 4.5 , 7 ]
     ];
-setInterval(function() { CheckValue() }, 100);
+setInterval(function() { CheckValue() }, 2500);
 function CheckValue(){
     var response = JSON.parse(httpGet("/check"));
     console.log(response.state);
