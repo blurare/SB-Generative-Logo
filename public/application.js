@@ -91,6 +91,7 @@ function nextTri(){
 		document.getElementById(id).style.bottom = (coordinates[i][1]*triHeight).toString()+"px";
 		document.getElementById(id).style.display = "block";
 		delete coordinates[i];
+		i++;
 	}
 	else {
 		console.log("bonjur yopta!")
