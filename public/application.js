@@ -2,65 +2,65 @@ var triWidth = 134;
 var triHeight = 87;
 var i = 1;
 var id ;
-var coordinates = new Array(
-	/*first Line*/
-		{ x: 0 , y: 0 },
-		{ x: 1 , y: 0 },
-		{ x: 2 , y: 0 },
-		{ x: 3 , y: 0 },
-		{ x: 4 , y: 0 },
-		{ x: 6 , y: 0 },
-		{ x: 7 , y: 0 },
-		{ x: 8 , y: 0 },
-		{ x: 9 , y: 0 },
-		{ x: 10 , y: 0 },
-		{ x: 11 , y: 0 },
-	/*second Line*/
-		{ x: 1.5 , y: 1 },
-		{ x: 2.5 , y: 1 },
-		{ x: 3.5 , y: 1 },
-		{ x: 4.5 , y: 1 },
-		{ x: 6.5 , y: 1 },
-		{ x: 7.5 , y: 1 },
-		{ x: 8.5 , y: 1 },
-		{ x: 9.5 , y: 1 },
-		{ x: 10.5 , y: 1 },
-	/*third Line*/
-		{ x: 2 , y: 2 },
-		{ x: 3 , y: 2 },
-		{ x: 4 , y: 2 },
-		{ x: 5 , y: 2 },
-		{ x: 7 , y: 2 },
-		{ x: 8 , y: 2 },
-		{ x: 9 , y: 2 },
-		{ x: 10 , y: 2 },
-	/*forth Line*/
-		{ x: 2.5 , y: 3 },
-		{ x: 3.5 , y: 3 },
-		{ x: 4.5 , y: 3 },
-		{ x: 5.5 , y: 3 },
-		{ x: 7.5 , y: 3 },
-		{ x: 8.5 , y: 3 },
-		{ x: 9.5 , y: 3 },
-	/*fifth Line*/
-		{ x: 3 , y: 4 },
-		{ x: 4 , y: 4 },
-		{ x: 5 , y: 4 },
-		{ x: 6 , y: 4 },
-		{ x: 8 , y: 4 },
-		{ x: 9 , y: 4 },
-	/*fifth Line*/
-		{ x: 3.5 , y: 5 },
-		{ x: 4.5 , y: 5 },
-		{ x: 5.5 , y: 5 },
-		{ x: 8.5 , y: 5 },
-	/*sixth Line*/
-		{ x: 4 , y: 6 },
-		{ x: 5 , y: 6 },
-	/*seventh Line*/
-		{ x: 4.5 , y: 7 }
-	);
 
+	var coordinates = 
+	[
+            [0 , 0 ],
+			[1 , 0 ],
+			[2 , 0 ],
+			[3 , 0 ],
+			[4 , 0 ],
+			[6 , 0 ],
+			[7 , 0 ],
+			[8 , 0 ],
+			[9 , 0 ],
+			[10 , 0 ],
+			[11 , 0 ],
+		/*second Line*/
+			[1.5 , 1 ],
+			[2.5 , 1 ],
+			[3.5 , 1 ],
+			[4.5 , 1 ],
+			[6.5 , 1 ],
+			[7.5 , 1 ],
+			[8.5 , 1 ],
+			[9.5 , 1 ],
+			[10.5 , 1],
+		/*third Line*/
+			[ 2 , 2 ],
+			[ 3 , 2 ],
+			[ 4 , 2 ],
+			[ 5 , 2 ],
+			[ 7 , 2 ],
+			[ 8 , 2 ],
+			[ 9 , 2 ],
+			[ 10 , 2],
+		/*forth Line*/
+			[2.5 ,  3 ],
+			[3.5 ,  3 ],
+			[4.5 ,  3 ],
+			[5.5 ,  3 ],
+			[7.5 ,  3 ],
+			[8.5 ,  3 ],
+			[9.5 ,  3 ],
+		/*fifth Line*/
+			[ 3 ,  4 ],
+			[ 4 ,  4 ],
+			[ 5 ,  4 ],
+			[ 6 ,  4 ],
+			[ 8 ,  4 ],
+			[ 9 ,  4 ],
+		/*fifth Line*/
+			[ 3.5 ,  5 ],
+			[ 4.5 ,  5 ],
+			[ 5.5 ,  5 ],
+			[ 8.5 ,  5 ],
+		/*sixth Line*/
+			[ 4 ,  6 ],
+			[ 5 ,  6 ],
+		/*seventh Line*/
+			[ 4.5 , 7 ]
+    ];
 setInterval(function() { CheckValue() }, 100);
 function CheckValue(){
     var response = JSON.parse(httpGet("/check"));
@@ -90,7 +90,7 @@ function nextTri(){
 		document.getElementById(id).style.left = (coordinates[i].x*triWidth).toString()+"px";
 		document.getElementById(id).style.bottom = (coordinates[i].y*triHeight).toString()+"px";
 		document.getElementById(id).style.display = "block";
-		i++;
+		delete coordinates[i];
 	}
 	else {
 		console.log("bonjur yopta!")
