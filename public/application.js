@@ -90,7 +90,7 @@ function nextTri(){
 		document.getElementById(id).style.left = (coordinates[i][0]*triWidth).toString()+"px";
 		document.getElementById(id).style.bottom = (coordinates[i][1]*triHeight).toString()+"px";
 		document.getElementById(id).style.display = "block";
-		delete coordinates[i];
+		//delete coordinates[i];
 		i++;
 	}
 	else {

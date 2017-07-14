@@ -4,7 +4,7 @@ require 'rpi_gpio'
 PIN_NUM = 27
 
 RPi::GPIO.set_numbering :bcm
-RPi::GPIO.setup PIN_NUM, :as => :output, :initialize => :low
+RPi::GPIO.setup PIN_NUM, :as => :input, :initialize => :low
 
 
 set :public_folder, 'public'
