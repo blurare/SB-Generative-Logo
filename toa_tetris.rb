@@ -10,12 +10,12 @@ RPi::GPIO.setup PIN_NUM, :as => :output, :initialize => :low
 set :public_folder, 'public'
 
 get '/' do
-  @value = checkPin(PIN_NUM)
+  @value = check_pin(PIN_NUM)
   erb :triangle
 end
 
 get '/check' do
-  {:state => checkPin(PIN_NUM)}.to_json
+  {:state => check_pin(PIN_NUM)}.to_json
 end
 
 def check_pin(pin)
