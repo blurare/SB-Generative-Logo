@@ -86,9 +86,9 @@ function httpGet(theUrl)
 function nextTri(){   
 	id = i.toString();
 	if (i<48){
-		console.log( i+" ("+coordinates[i].x+" , "+coordinates[i].y+")");
-		document.getElementById(id).style.left = (coordinates[i].x*triWidth).toString()+"px";
-		document.getElementById(id).style.bottom = (coordinates[i].y*triHeight).toString()+"px";
+		console.log( i+" ("+coordinates[i][0]+" , "+coordinates[i][1]+")");
+		document.getElementById(id).style.left = (coordinates[i][0]*triWidth).toString()+"px";
+		document.getElementById(id).style.bottom = (coordinates[i][1]*triHeight).toString()+"px";
 		document.getElementById(id).style.display = "block";
 		delete coordinates[i];
 	}
