@@ -1,5 +1,5 @@
-var triWidth = 134;
-var triHeight = 87;
+var triWidth = 9;
+var triHeight = 3;
 var i = 1;
 var id ;
 
@@ -90,8 +90,8 @@ function nextTri(){
 	id = i.toString();
 	if (i<48){
 		console.log( i+" ("+coordinates[i][0]+" , "+coordinates[i][1]+")");
-		document.getElementById(id).style.left = (coordinates[i][0]*triWidth).toString()+"px";
-		document.getElementById(id).style.bottom = (coordinates[i][1]*triHeight).toString()+"px";
+		document.getElementById(id).style.left = (coordinates[i][0]*triWidth).toString()+"%";
+		document.getElementById(id).style.bottom = (coordinates[i][1]*triHeight).toString()+"vw";
 		document.getElementById(id).style.display = "block";
 		//delete coordinates[i];
 		i++;
