@@ -67,12 +67,12 @@ function CheckValue(){
     console.log(response.state);
     if(response.state){
         nextTri();
-        document.getElementById('image').style.display ="block";
+        //document.getElementById('image').style.display ="block";
     }
-    else
-    {
-        document.getElementById('image').style.display ="none";
-    }
+    //else
+    //{
+        //document.getElementById('image').style.display ="none";
+    //}
 }
     
 function httpGet(theUrl)
