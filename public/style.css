@@ -15,6 +15,7 @@ body{
 	margin-top: 50%;
 	margin-top: 50vh;
 	min-height: 10vh;
+	width: 50%;
 }
 #sb-logo > div{
 		display: none;
