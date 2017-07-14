@@ -94,6 +94,6 @@ function nextTri(){
 		i++;
 	}
 	else {
-		console.log("bonjur yopta!")
+		location.reload();
 	}
 };
